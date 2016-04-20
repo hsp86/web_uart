@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:14px;
+    font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu;
+}
+.all{
+    margin:auto;
+    background-color:#fff;
+    width:600px;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+a:hover{
+    color:#fab969;
+}
+.header_text{
+    width: 100%;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom:solid 3px #135a86;
+}
+.search_div{
+    margin-left: 35px;
+}
+.execute{
+    height: 30px;
+    border: solid 1px #000;
+}
+#execute_text{
+    width:400px;
+    margin-right: -5px;
+    border-right: 0px;
+}
+#execute_button{
+    height: 32px;
+    padding: 0 50px 0 50px;
+    border-left: 0px;
+}
+.main{
+    margin-top: 20px;
+}
+.ctrl_item{
+    width: 100px;
+    margin-left: 40px;
+}
+.footer{
+    width:100%;
+    text-align:center;
+    color:#868f95;
+    border-top:solid 3px #135a86;
+    padding-top:10px;
+    margin-top: 40px;
+}
+

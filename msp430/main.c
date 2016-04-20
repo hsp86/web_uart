@@ -250,8 +250,8 @@ __interrupt void ADC10()        //  ADC10中断
     // temp = (ADC10MEM - 317)*4 + 130;
     temp = ADC10MEM;
     TX_num = 0;
-    says[0] = temp;
-    says[1] = temp>>8;
+    says[1] = temp;
+    says[0] = temp>>8;
     UCA0TXBUF = says[TX_num];
     IE2 |= UCA0TXIE;            //  使能发送中断
 }
