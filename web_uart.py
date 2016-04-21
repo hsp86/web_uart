@@ -4,7 +4,6 @@ import web
 import serial
 
 import config
-temp_dir = config.temp_dir
 
 # reload(sys)#支持中文
 # sys.setdefaultencoding('utf8')
@@ -14,7 +13,7 @@ urls = (
     '/execute','execute'
     )
 
-render = web.template.render(temp_dir)
+render = web.template.render(config.temp_dir)
 
 class index:
     def GET(self):
@@ -25,12 +24,12 @@ class execute:
     def GET(self):
         get_data = web.input(cmd={})
         cmd = get_data.cmd # 命令字符
-        ser = serial.Serial('com3',9600)
+        ser = serial.Serial(config.com_port,9600)
         ser.write(cmd)
         num = 0
         c = ser.read(1)
         while '\n' != c: #每次读取一个判断为换行才算读完
-            num = num * 256 + ord(c) # 将字符转换为对应ascii码；其它转化：int,float,str
+            num = num * 256 + ord(c) # 将字符转换为对应ascii码；其它转化：int,float,str,chr
             c = ser.read(1)
         ser.close()
         return str(num)
